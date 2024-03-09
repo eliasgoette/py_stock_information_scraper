@@ -9,4 +9,4 @@ while symbol == '':
 
 print('Fetching price')
 price = scraper.get_stock_price(symbol)
-print(price)
+print(f'Price of {symbol}: ${price}')
