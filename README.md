@@ -1,4 +1,4 @@
-# python-stock-scraper
+# py_stock_price_scraper
 
 A simple tool to get stock prices in python.
 Uses web scraping in order to get its data.
