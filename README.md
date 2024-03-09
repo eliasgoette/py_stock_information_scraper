@@ -1,5 +1,8 @@
 # python-stock-scraper
 
+A simple tool to get stock prices in python.
+Uses web scraping in order to get its data.
+
 ## Prerequisites
 Requires python as well as bs4.
 ```pip install bs4```
