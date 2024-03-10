@@ -9,10 +9,12 @@ def calculate_moving_average(data, window_size):
     return mean(data)
 
 def main():
+    sma_price_period = 6
+    sma_volume_period = 6
     symbol = input('Enter ticker symbol (case-sensitive) > ')
     
-    price_window = deque(maxlen=6)  # Moving average window for price
-    volume_window = deque(maxlen=6)  # Moving average window for volume
+    price_window = deque(maxlen=sma_price_period)  # Moving average window for price
+    volume_window = deque(maxlen=sma_volume_period)  # Moving average window for volume
     
     while True:
         scraper = YahooScraper(symbol)
@@ -23,8 +25,8 @@ def main():
             price_window.append(price)
             volume_window.append(volume)
             
-            price_ma = calculate_moving_average(price_window, 6)
-            volume_ma = calculate_moving_average(volume_window, 6)
+            price_ma = calculate_moving_average(price_window, sma_price_period)
+            volume_ma = calculate_moving_average(volume_window, sma_volume_period)
             
             print(f"Price: {price}, Volume: {volume}, Price Moving Average: {price_ma}, Volume Moving Average: {volume_ma}")
         else:
