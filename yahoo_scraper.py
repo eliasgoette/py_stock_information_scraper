@@ -2,7 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 
 class YahooScraper:
-    def get_stock_price(self, symbol):
+    def __init__(self, symbol):
+        self.symbol = symbol
+    
+    def get_stock_price(self):
+        symbol = self.symbol
         url = f"https://finance.yahoo.com/quote/{symbol}"
         response = requests.get(url)
         
