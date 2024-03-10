@@ -1,12 +1,12 @@
 # Paste example outside of this module
-from py_stock_price_scraper.yahoo_scraper import YahooScraper
+from py_stock_information_scraper.yahoo_scraper import YahooScraper
 
-scraper = YahooScraper()
 symbol = ''
 
 while symbol == '':
     symbol = input('Ticker symbol (case-sensitive) > ')
 
 print('Fetching price')
-price = scraper.get_stock_price(symbol)
+scraper = YahooScraper(symbol)
+price = scraper.get_stock_price()
 print(f'Price of {symbol}: ${price}')
