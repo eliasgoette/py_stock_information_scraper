@@ -11,4 +11,4 @@ Requires python as well as bs4.
 - Import this module
 - Create an instance of YahooScraper (more scrapers possible in the future)
   - Is initialized with a ticker symbol so that the asset only needs to be set once
-- Get stock prices using their ticker symbols (more methods possible in the future)
+- Get stock prices or volumes using their ticker symbols (more methods possible in the future)
